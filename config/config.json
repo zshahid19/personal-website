@@ -2,7 +2,7 @@
   "site": {
     "title": "Hydrogen Nextjs",
     "base_url": "/",
-    "favicon": "/images/developer.png"
+    "favicon": "/images/profile-picture.jpg"
   },
 
   "settings": {
@@ -12,10 +12,10 @@
   },
 
   "profile": {
-    "name": "Michael Caine",
-    "image": "/images/developer.png",
-    "designation": "Front-end developer",
-    "bio": "A Full Stack Front-end Developer based in New York. Meticulous web developer with over 2 years of front end experience and passion for responsive and mobile-first website design."
+    "name": "Zaid Shahid",
+    "image": "/images/profile-picture.jpg",
+    "designation": "Software Engineer, Solutions Architect, Technical Artist",
+    "bio": "Hey! I am a 4th year Computer Science Major at the University of Michigan - Ann Arbor looking for entry level work."
   },
 
   "params": {
