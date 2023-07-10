@@ -1,5 +1,5 @@
 ---
-title: "How to make toys from old Olarpaper"
+title: "Post 7"
 date: 2022-05-09T05:00:00Z
 image: /images/posts/post-7.jpg
 categories:

@@ -1,10 +1,9 @@
 ---
-title: "Post 5 "
-date: 2022-02-25T05:00:00Z
-image: /images/posts/post-5.jpg
+title: "Post 10"
+date: 2023-10-01T05:00:00Z
+image: /images/posts/post-1.jpg
 categories:
-  - Technology
-  - Workstation
+  - Cooking
 draft: false
 ---
 

@@ -11,6 +11,10 @@
     {
       "name": "Elements",
       "url": "/elements"
+    },
+    {
+      "name": "About Me",
+      "url": "/aboutme"
     }
   ]
 }

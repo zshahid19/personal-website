@@ -5,6 +5,7 @@ import ImageFallback from "@layouts/components/ImageFallback";
 import Pagination from "@layouts/components/Pagination";
 import Post from "@layouts/components/Post";
 import Social from "@layouts/components/Social";
+import Link from 'next/link';
 import { getSinglePage } from "@lib/contentParser";
 import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
@@ -12,8 +13,12 @@ const { blog_folder } = config.settings;
 
 const Home = ({ posts }) => {
   const { pagination } = config.settings;
-  const { name, image, designation, bio } = config.profile;
+  const { name, image, designation, bio, resume } = config.profile;
   const sortPostByDate = sortByDate(posts);
+
+  const ResumeLink = () => (
+    <Link href={"/../public/pdf/7-10-2023-Zaid-Shahid-Resume.pdf"}>{resume}</Link>
+  );
 
   return (
     <Base>
@@ -37,6 +42,7 @@ const Home = ({ posts }) => {
               )}
               {markdownify(designation, "p", "mt-6 text-primary text-xl")}
               {markdownify(bio, "p", "mt-4 leading-9 text-xl")}
+              <ResumeLink />
               <Social source={social} className="profile-social-icons mt-8" />
             </div>
           </div>
