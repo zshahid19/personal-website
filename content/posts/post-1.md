@@ -1,8 +1,8 @@
 ---
 title: "Building an Instagram Clone with Client-Side Dynamic Pages"
 date: 2022-04-04T05:00:00Z
-image: /images/posts/post-1.jpg
-categories: 
+image: /images/posts/insta485-dynamic.PNG
+categories:
   - Web Development
   - Software Engineering
 draft: false
@@ -23,6 +23,7 @@ For this project, I have explored and implemented the following cutting-edge tec
 4. REST APIs: By building a RESTful API, I have established a standardized way for the client application to interact with the server. This has facilitated seamless data retrieval and manipulation, ensuring a cohesive user experience.
 
 5. Command-Line Proficiency: Throughout the development process, I have honed my command-line skills, efficiently managing the project and executing various commands required for development, testing, and deployment.
+
 #### Project Overview:
 
 In this personal project, I embarked on building an Instagram clone with a focus on client-side dynamic pages. To kickstart the development, I reused server-side code from a previous project, refactoring it into a REST API. This allowed me to separate concerns between the client and server, enabling smoother data retrieval and manipulation.
