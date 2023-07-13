@@ -1,19 +1,57 @@
-import React, { useState } from "react";
+import menu from "@config/menu.json";
+import { useHeaderContext } from "context/state";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 
 const Header = () => {
+  // router
   const router = useRouter();
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const handleDropdownToggle = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
+  // context
   const { categories } = useHeaderContext();
 
-  const mainCategory = categories[0];
-  const subCategories = categories.slice(1);
+  // local state
+  const [openMenu, setOpenMenu] = useState(false);
+  const [navMenu, setNavMenu] = useState(
+    menu.main.map((item) => ({ ...item, type: "main" }))
+  );
+
+  useEffect(() => {
+    const matchRoute = menu.main.find((item) => item.url === router.asPath);
+    const navList = [...menu.main];
+
+    if (matchRoute) {
+      if (matchRoute.url === "/") {
+        const arr = categories.slice(0, 4);
+        navList.splice(1, 0, ...arr);
+        setNavMenu(navList);
+      } else {
+        setNavMenu(menu.main);
+      }
+    } else {
+      // if route not match
+      navList.splice(1, 0, ...categories);
+      navList.splice(navList.length - 2, menu.main.length - 1);
+      setNavMenu(navList);
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.asPath, menu.main, categories]);
+
+  const renderSubcategories = (children) => {
+    return (
+      <ul className="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
+        {children.map((child, i) => (
+          <li className="nav-dropdown-item" key={`children-${i}`}>
+            <Link href={child.url} className="nav-dropdown-link block">
+              {child.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    );
+  };
 
   return (
     <>
@@ -72,31 +110,33 @@ const Header = () => {
               !openMenu && "hidden"
             } w-full justify-center md:flex md:w-auto md:space-x-2 md:order-1`}
           >
-            <li className="nav-item">
-              <Link
-                onClick={() => setOpenMenu(false)}
-                href={mainCategory.url}
-                className={`nav-link inline-block ${
-                  !mainCategory.url.includes("/categories") && "text-dark"
-                } ${router.asPath === mainCategory.url && "nav-link-active"}`}
-              >
-                {mainCategory.name}
-              </Link>
-              {subCategories.length > 0 && (
-                <ul className="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
-                  {subCategories.map((subcategory, i) => (
-                    <li className="nav-dropdown-item" key={`children-${i}`}>
-                      <Link
-                        href={subcategory.url}
-                        className="nav-dropdown-link block"
-                      >
-                        {subcategory.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
+            {navMenu.map((menu, i) => (
+              <React.Fragment key={`menu-${i}`}>
+                {menu.hasChildren ? (
+                  <li className="nav-item nav-dropdown group relative">
+                    <span className="nav-link inline-flex items-center">
+                      {menu.name}
+                      <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                      </svg>
+                    </span>
+                    {renderSubcategories(menu.children)}
+                  </li>
+                ) : (
+                  <li className="nav-item">
+                    <Link
+                      onClick={() => setOpenMenu(false)}
+                      href={menu.url}
+                      className={`nav-link inline-block ${
+                        !menu.url.includes("/categories") && "text-dark"
+                      } ${router.asPath === menu.url && "nav-link-active"}`}
+                    >
+                      {menu.name}
+                    </Link>
+                  </li>
+                )}
+              </React.Fragment>
+            ))}
           </ul>
         </nav>
       </header>
