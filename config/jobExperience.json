@@ -1,0 +1,23 @@
+[
+    {
+      "company": "Company A",
+      "title": "Job Title A",
+      "timeWorked": "January 2018 - March 2021",
+      "description": [
+        "Achieved XYZ result in project 1",
+        "Led a team of developers in project 2",
+        "Implemented feature X for product Y"
+      ]
+    },
+    {
+      "company": "Company B",
+      "title": "Job Title B",
+      "timeWorked": "April 2021 - Present",
+      "description": [
+        "Managed client accounts and ensured customer satisfaction",
+        "Developed and maintained internal tools for improved efficiency",
+        "Collaborated with cross-functional teams to deliver successful projects"
+      ]
+    }
+  ]
+  

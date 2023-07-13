@@ -1,0 +1,23 @@
+[
+    {
+      "university": "University A",
+      "degree": "Bachelor of Science in Computer Science",
+      "timeStudied": "September 2015 - May 2019",
+      "description": [
+        "Courses: Algorithms, Data Structures, Web Development, Databases",
+        "Projects: Built a full-stack web application for XYZ",
+        "Received honors for outstanding academic performance"
+      ]
+    },
+    {
+      "university": "University B",
+      "degree": "Master of Business Administration",
+      "timeStudied": "September 2020 - May 2022",
+      "description": [
+        "Courses: Marketing, Finance, Strategic Management, Entrepreneurship",
+        "Thesis: Researched and analyzed the impact of digital marketing on consumer behavior",
+        "Recipient of the Business Excellence Award"
+      ]
+    }
+  ]
+  

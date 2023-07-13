@@ -6,6 +6,9 @@ import Pagination from "@layouts/components/Pagination";
 import Post from "@layouts/components/Post";
 import Social from "@layouts/components/Social";
 import Link from 'next/link';
+import Portfolio from "@layouts/components/Portfolio";
+import jobExperienceData from "@config/jobExperience.json";
+import educationData from "@config/education.json";
 import { getSinglePage } from "@lib/contentParser";
 import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
@@ -16,9 +19,12 @@ const Home = ({ posts }) => {
   const { name, image, designation, bio, resume } = config.profile;
   const sortPostByDate = sortByDate(posts);
 
-  const ResumeLink = () => (
-    <Link href={"/../public/pdf/7-10-2023-Zaid-Shahid-Resume.pdf"}>{resume}</Link>
-  );
+const ResumeLink = () => (
+  <Link href={"/../public/pdf/7-10-2023-Zaid-Shahid-Resume.pdf"} style={{ fontSize: '1rem', color: '#B5B5B5' }}>
+    {resume}
+  </Link>
+);
+
 
   return (
     <Base>
@@ -40,7 +46,7 @@ const Home = ({ posts }) => {
                 "h1",
                 "mt-12 text-6xl lg:text-8xl font-semibold"
               )}
-              {markdownify(designation, "p", "mt-6 text-primary text-xl")}
+              {markdownify(designation, "p", "mt-9 text-primary text-xl")}
               {markdownify(bio, "p", "mt-4 leading-9 text-xl")}
               <ResumeLink />
               <Social source={social} className="profile-social-icons mt-8" />
@@ -48,7 +54,11 @@ const Home = ({ posts }) => {
           </div>
         </div>
       </div>
-
+      
+      <div>
+        <Portfolio  jobExperience={jobExperienceData} education={educationData} />
+      </div>
+      
       {/* posts */}
       <div className="pt-4">
         <div className="container">
