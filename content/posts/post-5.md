@@ -3,8 +3,7 @@ title: "Post 5 "
 date: 2022-02-25T05:00:00Z
 image: /images/posts/post-5.jpg
 categories:
-  - Technology
-  - Workstation
+  - Technical Artist
 draft: false
 ---
 

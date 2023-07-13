@@ -3,7 +3,7 @@ title: "Post 6"
 date: 2022-06-10T05:00:00Z
 image: /images/posts/post-6.jpg
 categories:
-  - Technology
+  - Cooking
 draft: false
 ---
 

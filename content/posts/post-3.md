@@ -3,8 +3,8 @@ title: Scalable Search Engine - Python, Flask
 date: 2022-05-02T06:00:00+00:00
 image: /images/posts/post-3.jpg
 categories:
-  - Web Development
   - Software Engineering
+  - Web Development
 draft: false
 ---
 

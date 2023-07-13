@@ -1,18 +1,44 @@
 import config from "@config/config.json";
 import { dateFormat } from "@lib/utils/dateFormat";
 import Link from "next/link";
+import Image from "next/image";
+import React, { useState } from "react";
 const { blog_folder } = config.settings;
 
 const Post = ({ post, className }) => {
+  const getCategorySlug = (category) => {
+    return category.toLowerCase().replace(/\s+/g, "-");
+  };
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const postBoxStyle = {
+    transition: "transform 0.3s",
+    transform: isHovered ? "scale(1.05)" : "scale(1)",
+  };
+
   return (
     <div className={className}>
-      <div className="card">
+      <div
+        className="card"
+        style={postBoxStyle}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <ul className="flex items-center space-x-4">
           {post.frontmatter.categories.map((category, index) => (
             <li key={index}>
               <Link
                 className="text-primary"
-                href={`/categories/${category.toLowerCase()}`}
+                href={`/categories/${getCategorySlug(category)}`}
               >
                 {category}
               </Link>
@@ -25,8 +51,16 @@ const Post = ({ post, className }) => {
             {post.frontmatter.title}
           </Link>
         </h2>
+        <div className="post-preview-image">
+          <Image
+            src={post.frontmatter.image}
+            alt={post.frontmatter.title}
+            width={300}
+            height={200}
+          />
+        </div>
         <Link
-          className="btn-link mt-7 inline-flex items-center hover:text-primary"
+          className="btn-link mt-4 inline-flex items-center hover:text-primary"
           href={`/${blog_folder}/${post.slug}`}
         >
           Continue Reading

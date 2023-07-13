@@ -1,7 +1,7 @@
 ---
-title: "Post 10"
-date: 2023-10-01T05:00:00Z
-image: /images/posts/post-1.jpg
+title: "Post 600"
+date: 2022-06-10T05:00:00Z
+image: /images/posts/post-6.jpg
 categories:
   - Cooking
 draft: false
