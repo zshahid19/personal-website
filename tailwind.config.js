@@ -65,6 +65,11 @@ module.exports = {
         primary: [fontPrimary, fontPrimaryType],
         secondary: [fontSecondary, fontSecondaryType],
       },
+      backgroundImage: (theme) => ({
+        "vertical-split": `linear-gradient(110deg, ${theme(
+          "colors.default.theme_color.body2"
+        )} 50%, transparent 50%)`,
+      }),
     },
   },
   plugins: [

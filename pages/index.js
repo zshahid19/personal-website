@@ -12,7 +12,7 @@ import jobExperienceData from '@config/jobExperience.json';
 import educationData from '@config/education.json';
 import { getSinglePage } from '@lib/contentParser';
 import { sortByDate } from '@lib/utils/sortFunctions';
-const { blog_folder } = config.settings
+const { blog_folder } = config.settings;
 
 const Home = ({ posts }) => {
   const { pagination } = config.settings;
@@ -58,7 +58,15 @@ const Home = ({ posts }) => {
 
   return (
     <Base>
-      <style>{bounceAnimation}</style>
+      <style>
+        {`
+          ${bounceAnimation}
+          body {
+            background: linear-gradient(110deg, #2f4050 60%, #345864 60%);
+
+          }
+        `}
+      </style>
       {/* profile */}
       <div className="section">
         <div className="container">
