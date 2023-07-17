@@ -5,7 +5,7 @@
         "primary": "#ffad01",
         "body": "#17212b",
         "body2" : "#ffffff",
-        "border": "#ED6A5A"
+        "border": "#FF000000"
       },
       "text_color": {
         "default": "#ceced0",

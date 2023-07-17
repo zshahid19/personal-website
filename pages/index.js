@@ -62,7 +62,7 @@ const Home = ({ posts }) => {
         {`
           ${bounceAnimation}
           body {
-            background: linear-gradient(110deg, #2f4050 60%, #345864 60%);
+            background: linear-gradient(110deg, #17212b 60%, #2f4050 60%);
 
           }
         `}

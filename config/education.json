@@ -4,19 +4,17 @@
       "degree": "Bachelor in Computer Science",
       "timeStudied": "August 2021 - May 2024",
       "description": [
-        "Courses: Algorithms, Data Structures, Web Development, Databases",
-        "Projects: Built a full-stack web application for XYZ",
-        "Received honors for outstanding academic performance"
+        "Coursework: Data Structures & Algorithims, Web Systems, Computer Game Design"
+        
+        
       ]
     },
     {
-      "university": "University B",
-      "degree": "Master of Business Administration",
-      "timeStudied": "September 2020 - May 2022",
+      "university": "Oakland Community College",
+      "degree": "Associates In Arts",
+      "timeStudied": "September 2019 - August 2021",
       "description": [
-        "Courses: Marketing, Finance, Strategic Management, Entrepreneurship",
-        "Thesis: Researched and analyzed the impact of digital marketing on consumer behavior",
-        "Recipient of the Business Excellence Award"
+        "Coursework: Introduction to Java"
       ]
     }
   ]

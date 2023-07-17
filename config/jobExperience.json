@@ -4,19 +4,20 @@
       "title": "Solutions Architect Intern",
       "timeWorked": "May 2023 - August 2023",
       "description": [
-        "Achieved XYZ result in project 1",
-        "Led a team of developers in project 2",
-        "Implemented feature X for product Y"
+        "Expertise in designing scalable cloud solutions.",
+        "Proficient in leveraging cutting-edge AWS services to address complex business requirements.",
+        "Adaptable and skilled in keeping pace with evolving industry needs.",
+        "Focused on optimizing performance, security, and reliability for clients."
       ]
     },
     {
-      "company": "Company B",
-      "title": "Job Title B",
-      "timeWorked": "April 2021 - Present",
+      "company": "University of Michigan",
+      "title": "Audio Visual Aide",
+      "timeWorked": "August 2022 - Present",
       "description": [
-        "Managed client accounts and ensured customer satisfaction",
-        "Developed and maintained internal tools for improved efficiency",
-        "Collaborated with cross-functional teams to deliver successful projects"
+        "Troubleshoot, test, clean and perform maintenance on classroom audio-video equipment.",
+        "Collaborate with professors to create a technological optimal environment for learning."
+        
       ]
     }
   ]

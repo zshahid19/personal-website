@@ -1,7 +1,7 @@
 ---
 title: MapReduce Server - Python
 date: 2022-03-05T05:00:00Z
-image: /images/posts/post-2.jpg
+image: /images/posts/Mapreduce.png
 categories:
    - Software Engineering
    - Web Development
