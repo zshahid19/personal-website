@@ -1,7 +1,7 @@
 ---
 title: "Drone Delievery Using TSP & MST"
 date: 2022-07-13T05:00:00Z
-image: /images/posts/post-4.jpg
+image: /images/posts/drone-delivery.jpeg
 categories:
    - Software Engineering
    - Data Structure & Algorithims
