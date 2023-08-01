@@ -8,13 +8,9 @@ draft: false
 
 ## Get in touch
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+If you want to get in touch please send me an email at ZaidShahid19@gmail.com
 
 ### Location
 
-4140 Parker Rd. Allentown,
-New Mexico 31134
+Ann Arbor, Michigan
 
-### Phone
-
-+88544767456

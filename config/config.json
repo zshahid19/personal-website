@@ -21,18 +21,14 @@
 
   "params": {
     "contact_form_action": "#",
-    "tag_manager_id": "",
-    "copyright": "Copyright © 2022 a theme by [statichunt](https://statichunt.com)"
+    "tag_manager_id": ""
   },
 
   "metadata": {
-    "meta_author": "Statichunt",
+    "meta_author": "",
     "meta_image": "",
     "meta_description": ""
-  },
-
-  "disqus": {
-    "enable": true,
-    "shortname": "themefisher-template"
   }
+
+  
 }
